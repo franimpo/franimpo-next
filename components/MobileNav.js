@@ -17,7 +17,7 @@ const MobileNav = () => {
   }
 
   return (
-    <div id="toggleMenu" onClick="openMenu()" className='navBarHamburger hamburger hamburger--spin'> <span className='hamburger-box'>
+    <div id="toggleMenu"  className='navBarHamburger hamburger hamburger--spin'> <span className='hamburger-box'>
     <span className='hamburger-inner'></span> </span>
 </div>
   )

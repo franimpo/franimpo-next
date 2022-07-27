@@ -2,23 +2,31 @@ import Link from './Link'
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="mt-16 flex flex-col items-center">
-        <div className="mb-3 flex space-x-4">
-         
+    <footer id="footer-main">
+    <div className="contenedor">
+        <div className="iconos">
+            <a href="https://www.linkedin.com/in/francisco-impollino-a2a93645" target="_blank" rel="noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.499" viewBox="0 0 31.5 31.499">
+  <path id="Icon_awesome-linkedin-in" data-name="Icon awesome-linkedin-in" d="M7.051,31.5H.52V10.47H7.051ZM3.782,7.6A3.8,3.8,0,1,1,7.564,3.783,3.814,3.814,0,0,1,3.782,7.6ZM31.493,31.5H24.976V21.263c0-2.44-.049-5.569-3.4-5.569-3.4,0-3.916,2.651-3.916,5.393V31.5H11.142V10.47h6.263v2.869H17.5a6.862,6.862,0,0,1,6.179-3.4c6.609,0,7.824,4.352,7.824,10.005V31.5Z" transform="translate(0 -0.001)" fill="#0a004b"></path>
+</svg>
+</a>
+            <a href="http://www.behance.net/franimpo" target="_blank" rel="noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40.083" height="25.128" viewBox="0 0 40.083 25.128" style={{transform: 'translateY(2px)'}}>
+  <path id="Icon_awesome-behance" data-name="Icon awesome-behance" d="M16.144,16.561a5.281,5.281,0,0,0,3.368-5.15c0-4.913-3.66-6.11-7.884-6.11H0V29.964H11.955c4.481,0,8.692-2.15,8.692-7.161,0-3.1-1.468-5.386-4.5-6.242ZM5.421,9.512h5.087c1.955,0,3.716.55,3.716,2.818,0,2.095-1.371,2.937-3.305,2.937h-5.5V9.512Zm5.8,16.263h-5.8V18.983h5.908c2.387,0,3.9,1,3.9,3.521,0,2.491-1.8,3.271-4.008,3.271ZM36.165,9.025h-10V6.6h10V9.025Zm3.918,12.268c0-5.282-3.09-9.687-8.692-9.687-5.442,0-9.137,4.092-9.137,9.45,0,5.56,3.5,9.373,9.137,9.373,4.266,0,7.028-1.921,8.358-6.005H35.42c-.466,1.524-2.387,2.331-3.876,2.331-2.874,0-4.384-1.684-4.384-4.544H40.041C40.062,21.919,40.083,21.606,40.083,21.293ZM27.167,19.122a3.833,3.833,0,0,1,4.071-3.813c2.463,0,3.7,1.447,3.911,3.813Z" transform="translate(0 -5.302)" fill="#0a004b"></path>
+</svg>
+
+        </a>
+            <a href="http://www.github.com/franimpo" target="_blank" rel="noreferrer" className="d-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="31.5" height="31.5" viewBox="0 0 31.5 31.5">
+  <path id="Icon_ionic-logo-github" data-name="Icon ionic-logo-github" d="M18,2.25A15.957,15.957,0,0,0,2.25,18.4,16.12,16.12,0,0,0,13.022,33.722a1.235,1.235,0,0,0,.267.028.762.762,0,0,0,.809-.8c0-.387-.014-1.4-.021-2.749a7.2,7.2,0,0,1-1.589.19,3.659,3.659,0,0,1-3.72-2.355,4.265,4.265,0,0,0-1.751-2.362c-1.371-.963-.007-.991.1-.991h.007a3.386,3.386,0,0,1,2.412,1.673,3.092,3.092,0,0,0,2.784,1.765,4.426,4.426,0,0,0,1.8-.422,3.489,3.489,0,0,1,1-2.159c-3.495-.408-7.172-1.793-7.172-7.98a6.321,6.321,0,0,1,1.617-4.331,5.945,5.945,0,0,1,.155-4.275,1.311,1.311,0,0,1,.352-.035c.57,0,1.856.218,3.98,1.695a14.64,14.64,0,0,1,7.889,0c2.123-1.477,3.41-1.695,3.98-1.695a1.311,1.311,0,0,1,.352.035,5.945,5.945,0,0,1,.155,4.275,6.347,6.347,0,0,1,1.617,4.331c0,6.2-3.684,7.566-7.193,7.966a3.916,3.916,0,0,1,1.069,2.988c0,2.159-.021,3.9-.021,4.43a.758.758,0,0,0,.8.809,1.361,1.361,0,0,0,.281-.028A16.117,16.117,0,0,0,33.75,18.4,15.957,15.957,0,0,0,18,2.25Z" transform="translate(-2.25 -2.25)" fill="#0a004b"></path>
+</svg>
+
+
+        </a>
         </div>
-        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          <div>{` • `}</div>
-          <div>{`© ${new Date().getFullYear()}`}</div>
-          <div>{` • `}</div>
-          <Link href="/"></Link>
-        </div>
-        <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-          <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
-            Tailwind Nextjs Theme
-          </Link>
-        </div>
-      </div>
-    </footer>
+
+        <div className="cc">Diseño y desarrollo por Francisco Impollino</div>
+    </div>
+</footer>
   )
 }

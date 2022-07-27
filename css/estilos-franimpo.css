@@ -1,59 +1,58 @@
 @font-face {
-  font-family: 'Argesta';
-  src: url('../public/fonts/argestadisplay-regular-webfont.woff2') format('woff2'),
-    url('../public/fonts/argestadisplay-regular-webfont.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Argesta';
+    src: url('../public/fonts/argestadisplay-regular-webfont.woff2') format('woff2'),
+        url('../public/fonts/argestadisplay-regular-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
 
 :root {
-  --rojo: #e01350;
-  --azul: #0a004b;
-  --gris: #696969;
-  --offwhite: #f5f5f5;
-  --sansserif: 'DM Sans', sans-serif;
-  --serif: 'Argesta', serif;
+    --rojo: #e01350;
+    --azul: #0a004b;
+    --gris: #696969;
+    --offwhite: #f5f5f5;
+    --sansserif: 'DM Sans', sans-serif;
+    --serif: 'Argesta', serif;
 }
 
-html body {
-}
+html body {}
 
 body {
-  font-family: var(--sansserif);
-  background-color: var(--offwhite);
-  color: var(--azul);
-  line-height: 1;
-  transition: all 0.1s ease;
+    font-family: var(--sansserif);
+    background-color: var(--offwhite);
+    color: var(--azul);
+    line-height: 1;
+    transition: all 0.1s ease;
 }
 
 p {
-  font-family: var(--serif);
+    font-family: var(--serif);
 }
 
 #header-main {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 #header-main #fi-logo {
-  width: 280px;
-  transition: width 0.2s ease;
+    width: 280px;
+    transition: width 0.2s ease;
 }
 
 #fi-logo .logocls-1 {
-  fill: #e01350;
+    fill: #e01350;
 }
 
 #fi-logo .logocls-2 {
-  fill: #0a004b;
+    fill: #0a004b;
 }
 
 #fi-logo .logocls-3 {
-  fill: #e6275f;
+    fill: #e6275f;
 }
 
 .nav-open #main-menu .navbar-nav,
@@ -165,220 +164,222 @@ p {
 .nav-item .nav-link svg path {
     fill: var(--rojo);
 }
+
 #hero {
-  padding-top: 5rem;
-  padding-bottom: 7rem;
+    padding-top: 5rem;
+    padding-bottom: 7rem;
 }
 
 #hero h1 {
-  font-size: 3rem;
-  font-family: var(--serif);
-  max-width: 950px;
+    font-size: 3rem;
+    font-family: var(--serif);
+    max-width: 950px;
 }
 
 .posts-grid {
-  column-count: 2;
-  column-gap: 2rem;
+    column-count: 2;
+    column-gap: 2rem;
 }
 
 .posts-grid .post {
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 2rem;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
 }
 
 .posts-grid .post:first-child {
-  transform: translateY(-2rem);
-  margin-bottom: 0;
+    transform: translateY(-2rem);
+    margin-bottom: 0;
 }
 
 .posts-grid .post img {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-out;
 }
 
 .posts-grid .post:hover img {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .posts-grid .post:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--azul);
-  opacity: 0;
-  z-index: 0;
-  transition: opacity 0.5s ease-out;
-  pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--azul);
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.5s ease-out;
+    pointer-events: none;
 }
 
 .posts-grid .post:hover:after {
-  opacity: 0.4;
+    opacity: 0.4;
 }
 
 .posts-grid .post a {
-  text-decoration: none;
-  width: 100%;
-  position: relative;
-  display: block;
+    text-decoration: none;
+    width: 100%;
+    position: relative;
+    display: block;
 }
 
-.image-container > span {
-  position: relative !important;
-  width: auto !important;
-  height: auto !important;
-  width: auto !important;
-  height: auto !important;
+.image-container>span {
+    position: relative !important;
+    width: auto !important;
+    height: auto !important;
+    width: auto !important;
+    height: auto !important;
 }
 
-.image-container > span img {
-  width: 100% !important;
-  position: relative !important;
-  height: auto !important;
+.image-container>span img {
+    width: 100% !important;
+    position: relative !important;
+    height: auto !important;
 }
 
 .posts-grid .post .info {
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  padding: 10px 5% 30px 5%;
-  max-width: 100%;
-  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px 5% 30px 5%;
+    max-width: 100%;
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
 
 .posts-grid .post:hover .info {
-  opacity: 1;
-  z-index: 999;
-  transform: translateY(-8px);
+    opacity: 1;
+    z-index: 999;
+    transform: translateY(-8px);
 }
 
 .posts-grid .post .info h2 {
-  font-family: var(--sansserif);
-  font-weight: 500;
-  font-size: 1.6rem;
-  padding: 0;
-  color: #fff;
+    font-family: var(--sansserif);
+    font-weight: 500;
+    font-size: 1.6rem;
+    padding: 0;
+    color: #fff;
 }
 
 .posts-grid .post .info .categoria {
-  margin: 0;
-  padding: 0;
-  font-size: 0.9rem;
-  margin-top: 0.75rem;
-  font-family: var(--serif);
-  font-weight: 400;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 /* MODO OSCURO */
 
 html.dark body {
-  background-color: #151c38;
-  color: #fff;
+    background-color: #151c38;
+    color: #fff;
 }
 
 html.dark #header-main .nav-item .nav-link,
 html.dark .header-post .item .contenido {
-  color: #fff;
+    color: #fff;
 }
 
 html.dark .header-post .item .titulo,
 html.dark .header-post .categoria,
 html.dark .post-navigation .nav-links a {
-  color: #c3c8da;
+    color: #c3c8da;
 }
 
 html.dark .hr-footer {
-  border: solid 1px rgb(43 50 78);
+    border: solid 1px rgb(43 50 78);
 }
 
 html.dark .header-post .ficha:before {
-  background-color: rgb(43 50 78);
+    background-color: rgb(43 50 78);
 }
 
 html.dark #header-main #fi-logo .logocls-2 {
-  fill: #fff;
+    fill: #fff;
 }
 
 html.dark #footer-main {
-  background-color: rgb(7, 14, 39);
+    background-color: rgb(7, 14, 39);
 }
 
 html.dark #footer-main .iconos a svg {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 html.dark #footer-main .iconos a:hover svg {
-  opacity: 1;
+    opacity: 1;
 }
 
 html.dark #footer-main .iconos a svg path {
-  fill: #fff;
+    fill: #fff;
 }
 
 html.dark .hamburger-inner,
 html.dark .hamburger-inner::before,
 html.dark .hamburger-inner::after {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 html.dark .nav-item .nav-link svg path {
-  fill: #fff;
+    fill: #fff;
 }
 
 html.dark .nav-item .nav-link:hover svg path {
-  fill: var(--rojo);
+    fill: var(--rojo);
 }
 
 html.dark #contacto button.enviar-form {
-  background-color: #fff;
-  color: var(--azul);
-  border: solid 2px #fff;
+    background-color: #fff;
+    color: var(--azul);
+    border: solid 2px #fff;
 }
 
 html.dark #contacto button.enviar-form:hover {
-  background: none;
-  color: #fff;
+    background: none;
+    color: #fff;
 }
 
 
 @media (max-width: 1024px) {
 
 
-  #header-main #toggleMenu {
-      display: block;
-      width: 50px;
-      height: 50px;
-      position: relative;
+    #header-main #toggleMenu {
+        display: block;
+        width: 50px;
+        height: 50px;
+        position: relative;
 
-      z-index: 10;
-      cursor: pointer;
-  }
-  .hamburger-box {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    z-index: 999999;
-  }
-  }
-  
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .hamburger-box {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 999999;
+    }
+}
+
 /* force scrollbar, prevents initial gap */
 /* CSS RESET */
 html {
@@ -633,6 +634,36 @@ strong {
     text-align: left;
 }
 
+.wp-block-image .aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-block-image.aligncenter,
+.wp-block-image .aligncenter,
+.wp-block-image.alignleft,
+.wp-block-image .alignleft,
+.wp-block-image.alignright,
+.wp-block-image .alignright {
+    display: table;
+}
+
+.wp-block-image figure {
+    margin: 0;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.aligncenter {
+    clear: both;
+}
+
+.wp-block-image.alignfull img,
+.wp-block-image.alignwide img {
+    height: auto;
+    width: 100%;
+}
+
 @media only screen and (max-width: 1441px) {
     .contenedor {
         max-width: 1140px;
@@ -812,12 +843,19 @@ strong {
     transition: width 0.2s ease;
 }
 
-body.scroll-down #header-main {
+#header-main.scroll-down {
     backdrop-filter: blur(0.7em);
     -webkit-backdrop-filter: blur(10em);
 }
 
-body.scroll-down #header-main #fi-logo {
+@-moz-document url-prefix() {
+    #header-main.scroll-down {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+
+#header-main.scroll-down #fi-logo {
     width: 150px;
 }
 
@@ -836,24 +874,26 @@ body.scroll-down #header-main #fi-logo {
     display: flex;
     align-items: center;
 }
-#header-main .trp-language-switcher > div {
-    border: none;
-    background: none;
-}
-#header-main .trp-language-switcher > div:hover {
+
+#header-main .trp-language-switcher>div {
     border: none;
     background: none;
 }
 
-#header-main .trp-language-switcher > div > a {
-font-family: var(--serif);
-color: var(--gris);
-text-decoration: none;
-text-transform: uppercase;
+#header-main .trp-language-switcher>div:hover {
+    border: none;
+    background: none;
 }
 
-#header-main .trp-language-switcher > div > a:hover {
-color: var(--rojo);
+#header-main .trp-language-switcher>div>a {
+    font-family: var(--serif);
+    color: var(--gris);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#header-main .trp-language-switcher>div>a:hover {
+    color: var(--rojo);
 }
 
 .nav-item .nav-link svg {
@@ -884,10 +924,11 @@ color: var(--rojo);
 }
 
 #header-main .nav-item:hover .nav-link {
-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
+
 #header-main .nav-item:hover .nav-link {
-color: var(--rojo);
+    color: var(--rojo);
 }
 
 #hero {
@@ -924,16 +965,15 @@ color: var(--rojo);
     justify-content: center;
 }
 
+.swiper-wrapper {
+    min-height: 600px;
+}
+
 .proyecto {
     width: calc(50% - 2rem);
     overflow: hidden;
     position: relative;
 }
-
-.proyecto:nth-of-type(2) {
-    margin-top: 80px;
-}
-
 .proyecto img {
     top: 0;
     left: 0;
@@ -946,6 +986,10 @@ color: var(--rojo);
 
 .proyecto:hover img {
     transform: scale(1.05);
+}
+
+.proyecto.swiper-slide {
+    height: auto;
 }
 
 .proyecto:after {
@@ -975,11 +1019,11 @@ color: var(--rojo);
 .proyecto .info {
     opacity: 0;
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    width: 100%;
+    width: 90%;
     height: auto;
-    padding: 10px 5% 30px 5%;
+    padding: 30px 10% 10px 5%;
     max-width: 100%;
     transition: opacity .2s ease-out, transform .2s ease-out;
 
@@ -1009,6 +1053,14 @@ color: var(--rojo);
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     color: #fff;
+}
+
+.image-container {
+    max-height: 630px;
+}
+
+.image-container>span img {
+    min-height: 300px;
 }
 
 #footer-main {
@@ -1360,6 +1412,10 @@ color: var(--rojo);
 /* MOBILE */
 
 @media (max-width: 1024px) {
+
+    #header-main {
+        margin-bottom: 1.5rem;
+    }
     #header-main #fi-logo {
         width: 200px;
     }
@@ -1544,7 +1600,7 @@ color: var(--rojo);
     }
 
     .contenedor {
-        width: 97%;
+        width: 90%;
         padding-right: 15px;
         padding-left: 15px;
     }
@@ -1590,7 +1646,9 @@ color: var(--rojo);
     .grid-sizer {
         width: 100%;
     }
-
+    .proyecto.swiper-slide {
+        max-height: 350px;
+    }
     .proyecto {
         margin-bottom: 3rem;
     }

@@ -10,33 +10,45 @@ export default function Post( data ){
            <div className="header-post ">
         <div className="contenedor ">
             <div className="top">
-        <p className="categoria">
-        {post.category}</p>
+           {post.categories.nodes.map(item => { 
+return (
+   
+                <p className="categoria" key={item.name}>{ item.name }</p>
+             
+
+
+    );
+})}
        <h1>{post.title}</h1>
         </div>
                 <div className="bottom">
-            <div className="descripcion">
+            <div className="descripcion" dangerouslySetInnerHTML={{__html: post.excerpt}}>
                 
-                {post.excerpt}              
+                        
                
             </div>
-            <div className=" ficha">
-            {
-            post.proyecto.ficha.map(item => {
-                <div className="item">
-                <p className="titulo">{item.fichaTit}</p>
+            <div className="ficha">
+           
+          {post.proyecto.ficha.map(item => { 
+return (
+    <div className="item" key={item.fichaTxt}>
+                <p className="titulo">{ item.fichaTit }</p>
                 <p className="contenido">{item.fichaTxt}</p>
                 </div>
-})
-}
-                            </div>
-                            <a href={post.proyecto.proyLink} className="main-cta" target="_blank" rel="noreferrer"><span>Ver Sitio Web</span></a> 
 
+
+    );
+})}
+          
+
+                           
+                            <a href={post.proyecto.proyLink} className="main-cta" target="_blank" rel="noreferrer"><span>Ver Sitio Web</span></a> 
+                            </div>
         </div>
           </div>
                 </div>
              
-               <article dangerouslySetInnerHTML={{__html: post.content}}></article>
+               <div className="entry-content" dangerouslySetInnerHTML={{__html: post.content}}></div>
            </article>
         </main>
     )
@@ -88,7 +100,7 @@ export async function getStaticProps(context) {
     })
 
     const json = await res.json()
-
+// console.log(post.proyecto.ficha)
     return {
         props: {
             post: json.data.post,

@@ -12,15 +12,30 @@ export default function Header() {
     document.body.classList.toggle('nav-open')
   }
 
+  const [headerClassName, setHeaderClassName] = useState('');
+
+  const handleScroll = (headerClassName) => {
+      if (headerClassName !== 'scroll-down' && window.pageYOffset >= 100) {
+          setHeaderClassName('scroll-down');
+      } else if (headerClassName === 'scroll-down' && window.pageYOffset < 100) {
+          setHeaderClassName('');
+      }
+  }
+
+  React.useEffect(() => {
+      window.onscroll = () => handleScroll(headerClassName);
+  }, [headerClassName]); // IMPORTANT, This will cause react to update depending on change of this value
+
+
   return (
-    <header className="flex items-center justify-between py-4" id="header-main">
+    <header className={headerClassName} id="header-main">
       <div className="contenedor">
         <Link href="/" aria-label="" className="logo">
-          <div className="flex items-center justify-between">
-            <div className="mr-3">
-              <Logo />
-            </div>
-          </div>
+          <a>
+            
+                <Logo />
+          </a>
+            
         </Link>
 
         <div id="main-menu">
