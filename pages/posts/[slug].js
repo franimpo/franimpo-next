@@ -73,7 +73,7 @@ export default function Post( data ){
 
 
 
-                    {linkWeb ? `<a href=${post.proyecto.proyLink} className="main-cta" target="_blank" rel="noreferrer"><span>Ver Sitio Web</span></a>` : ''}
+                    {linkWeb ? <a href={post.proyecto.proyLink} className="main-cta" target="_blank" rel="noreferrer"><span>Ver Sitio Web</span></a> : ''}
                   </div>
                 </div>
               </div>
