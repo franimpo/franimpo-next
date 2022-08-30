@@ -5,6 +5,7 @@ export default function Post( data ){
     const post = data.post;
     const linkWeb = post.proyecto.proyLink
     const contenido = post.content
+    const excerpt = post.excerpt
     return (
       <><Head>
         <title>{post.title} Francisco Impollino &#x2d; Diseñador Gráfico y Desarrollador Web | Portfolio</title>
@@ -51,10 +52,7 @@ export default function Post( data ){
                 </div>
                 <div className="bottom">
                   <div className="descripcion" dangerouslySetInnerHTML={{ __html: post.excerpt }}>
-
-
-
-                  </div>
+     </div>
                   <div className="ficha">
 
                     {post.proyecto.ficha.map(item => {

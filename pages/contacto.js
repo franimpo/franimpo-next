@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Head from 'next/head';
 import ContactForm from '../components/Contact';
 
-export default function Contact( {} ){
+export default function Contacto( {} ){
 
   function validateFormWithJS() {
     const name = document.querySelector('#name').value
@@ -49,8 +49,27 @@ export default function Contact( {} ){
 
 
       </Head>
+      <div className="contenedor">
+        <div className="header-post">
+                  <h1 className="">Contacto</h1>
+                  </div>
+      </div>
  <section>
-  <ContactForm></ContactForm>
+  <div className="contenedor">
+  
+    <div className="acerca-contacto">
+     <div id="acerca" className="col-md-6">
+     <p>
+                <strong>¡Hola! Soy Francisco, diseñador gráfico recibido en la Universidad de Buenos Aires.</strong> Hago diseño de marcas, editorial, algo de ilustración, y me especializo en diseño web, desde la etapa inicial de research y bocetado hasta el maquetado en HTML, CSS y JavaScript, la programación, optimización y la puesta en producción, tanto de sitios estáticos como manejados a través de un CMS (en especial WordPress).
+
+</p>
+     </div>
+<div id="contacto" className="offset-md-1 col-md-5">
+<ContactForm></ContactForm>
+</div>
+    </div>
+  </div>
+ 
  </section>
     
   </div>

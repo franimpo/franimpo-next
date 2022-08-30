@@ -92,7 +92,7 @@ return (
             </SwiperSlide>
             )
                 })
-              }/
+              }
                 </Swiper>
           </div>
         </div>
