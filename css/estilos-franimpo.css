@@ -55,7 +55,10 @@ body {
 #fi-logo .logocls-3 {
     fill: #e6275f;
 }
-
+ul.navbar-nav {
+    list-style: none;
+    padding-left: 0;
+}
 .nav-open #main-menu .navbar-nav,
 .nav-open #main-menu #navMenuClose {
     pointer-events: all;
@@ -547,7 +550,7 @@ strong {
     overflow: hidden;
     position: relative;
     background-color: var(--loading-grey);
-    background: linear-gradient( 100deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, 0) 60% ) var(--loading-grey);
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, 0) 60%) var(--loading-grey);
     background-size: 200% 100%;
     background-position-x: 180%;
     animation: 1s loading ease-in-out infinite;
@@ -556,11 +559,11 @@ strong {
 
 @keyframes loading {
     to {
-      background-position-x: -20%;
+        background-position-x: -20%;
     }
-  }
-  
-  
+}
+
+
 .proyecto img {
     top: 0;
     left: 0;
@@ -644,7 +647,7 @@ strong {
 }
 
 .image-container {
-  aspect-ratio: 1;
+    aspect-ratio: 1;
 }
 
 
@@ -724,16 +727,33 @@ strong {
     box-shadow: inset 0px 0px 0px 2px #00173c;
 }
 
+button.btn {
+    padding: 10px 15px;
+    position: relative;
+    color: #00173c;
+    display: inline-block;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: var(--serif);
+    color: #fff;
+    transition: all .2s ease-in-out;
+    background-color: var(--azul);
+}
+
+button.btn:hover {
+    background-color: #fff;
+    color: var(--azul);
+}
 /* SINGLE */
 
-.header-post {
-    padding-top: 2rem;
-}
+.header-post {}
 
 .header-post h1 {
     text-align: center;
     font-size: 3.5rem;
     font-weight: 700;
+    margin-top: 1.5rem;
     color: var(--rojo);
 }
 
@@ -804,6 +824,7 @@ strong {
 .header-post .item .contenido {
     font-size: 1.15rem;
     margin-top: .5rem;
+    margin-bottom: 0;
     color: var(--azul);
     font-family: var(--serif);
 }
@@ -929,6 +950,44 @@ strong {
     line-height: 1.4;
 }
 
+form {
+    padding-top: 1rem;
+}
+
+form .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+form label {
+    font-weight: 500;
+    margin-bottom: .25rem;
+}
+
+form input {
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #333;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: block;
+    float: none;
+    font-size: 16px;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    height: 38px;
+    width: 100%;
+    line-height: 1.3;
+}
+
+form button {
+    cursor: pointer;
+}
+
 #contacto button.enviar-form {
     font-family: var(--serif);
     border: none;
@@ -982,14 +1041,30 @@ strong {
     #header-main #toggleMenu {
         display: none;
     }
-.col-md-5   {
-    -ms-flex: 0 0 41.666667%;
-    flex: 0 0 41.666667%;
-    max-width: 41.666667%;
-}
-.offset-md-1 {
-    margin-left: 8.333333%;
-  }
+
+    .acerca-contacto {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .col-md-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+
+    .col-md-6 {
+        -ms-flex: 0 0 49.666667%;
+        flex: 0 0 49.666667%;
+        max-width: 49.666667%;
+    }
+
+    .offset-md-1 {
+        margin-left: 8.333333%;
+    }
 }
 
 /* SOLO DESKTOP GRANDE */
@@ -1010,6 +1085,7 @@ strong {
     #header-main {
         margin-bottom: 1.5rem;
     }
+
     #header-main #fi-logo {
         width: 200px;
     }
@@ -1240,9 +1316,11 @@ strong {
     .grid-sizer {
         width: 100%;
     }
+
     .proyecto.swiper-slide {
         max-height: 350px;
     }
+
     .proyecto {
         margin-bottom: 3rem;
     }

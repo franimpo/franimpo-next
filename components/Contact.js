@@ -2,29 +2,29 @@ export default function ContactForm() {
     return (
       <form name="contact" method="POST" action="/success"  data-netlify="true"   data-netlify-recaptcha="true">
         <input type="hidden" name="form-name" value="contact" />
-        <p>
-  <input type="text" name="firstname" id="firstname" />
+        <div className="wrapper">
           <label htmlFor="yourname">
-            Your Name:
-          </label> <br />
-          <input type="text" name="name" required id="yourname" />
-        </p>
-        <p>
+            Nombre y apellido
+          </label> 
+  <input type="text" name="firstname" id="firstname" required />
+         
+        </div>
+        <div className="wrapper">
           <label htmlFor="youremail">
-            Your Email:
-          </label> <br />
+          E-mail
+          </label>
           <input type="email" name="email" required id="youremail" />
-        </p>
-        <p>
+        </div>
+        <div className="wrapper">
           <label htmlFor="yourmessage">
-            Message:
-          </label> <br />
-          <textarea name="message" required id="yourmessage"></textarea>
-        </p>
+         Mensaje
+          </label> 
+          <textarea name="message" required id="yourmessage" rows="6"></textarea>
+        </div>
         <div data-netlify-recaptcha="true"></div>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+        <div>
+          <button className="btn" type="submit">Enviar {">"}</button>
+        </div>
       </form>
     )
   }
