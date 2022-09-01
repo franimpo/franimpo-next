@@ -47,8 +47,8 @@ export default function Home( {posts} ){
     </h1></div>
 </section>
       <section id="proyectos">
-        <div className="">
-          <div className="grilla">
+
+          <div className="grlla">
             <Swiper
             spaceBetween={25}
             slidesPerView={1.25}
@@ -57,13 +57,13 @@ export default function Home( {posts} ){
             observer={true}
             observeParents={true}
             centeredSlides={true}
-            touchEventsTarget = {'container'}
+            touchEventsTarget = {'image-container'}
             loop = {true}
             breakpoints={{
             1024: {
-                slidesPerView: 2.5,
+                slidesPerView: "2.5",
                 spaceBetween: 50,
-                autoHeight:true,
+             //  autoHeight:true,
               },
             }}
                 >
@@ -73,7 +73,7 @@ export default function Home( {posts} ){
             <SwiperSlide className='proyecto'  key={post.databaseId}>
               <a href={`/posts/${post.slug}`}  data-tile-position="https://www.franimpo.com/wp-content/uploads/2022/07/cover-nqi-scaled.jpg">
                        <div className={'image-container'}>
-                                 <Image src={post.featuredImage.node.sourceUrl} alt={post.title} className="thumbnail" layout="fill" />
+                                 <Image src={post.featuredImage.node.sourceUrl}  className="thumbnail" layout="fill" />
                                </div>
                                          <div className="info">
                                              <h2>{post.title}</h2>
@@ -95,7 +95,7 @@ return (
               }
                 </Swiper>
           </div>
-        </div>
+        
       </section>
     
   </div>

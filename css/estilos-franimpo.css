@@ -210,6 +210,7 @@ strong {
 .wp-block-image .aligncenter {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 .wp-block-image.aligncenter,
@@ -539,9 +540,7 @@ strong {
     justify-content: center;
 }
 
-.swiper-wrapper {
-    min-height: 600px;
-}
+
 
 .proyecto {
     width: calc(50% - 2rem);
@@ -569,6 +568,7 @@ strong {
     bottom: 0;
     width: 100%;
     height: auto;
+    object-fit: cover;
     transition: transform .5s ease-out;
 }
 
@@ -644,14 +644,13 @@ strong {
 }
 
 .image-container {
-    max-height: 630px;
+  aspect-ratio: 1;
 }
 
-.image-container>span img {
-    min-height: 300px;
-}
+
 
 #footer-main {
+    margin-top: 5rem;
     background-color: #eaeaea;
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -804,6 +803,7 @@ strong {
 
 .header-post .item .contenido {
     font-size: 1.15rem;
+    margin-top: .5rem;
     color: var(--azul);
     font-family: var(--serif);
 }
