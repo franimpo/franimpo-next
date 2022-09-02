@@ -40,7 +40,7 @@ export default function Header() {
         <div id="main-menu">
           <ul className="navbar-nav">
             <li className='nav-item'>
-              <a href="" className='nav-link'>Proyectos</a>
+              <Link href="/" className='nav-link'>Proyectos</Link>
             </li>
             <li className='nav-item'>
               <a href="contacto" className='nav-link'>Acerca/Contacto</a>

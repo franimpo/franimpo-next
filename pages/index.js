@@ -71,9 +71,9 @@ export default function Home( {posts} ){
                   posts.nodes.map(post => {
                     return(
             <SwiperSlide className='proyecto'  key={post.databaseId}>
-              <a href={`/posts/${post.slug}`}  data-tile-position="https://www.franimpo.com/wp-content/uploads/2022/07/cover-nqi-scaled.jpg">
+              <a href={`/proyectos/${post.slug}`}  data-tile-position="https://www.franimpo.com/wp-content/uploads/2022/07/cover-nqi-scaled.jpg">
                        <div className={'image-container'}>
-                                 <Image src={post.featuredImage.node.sourceUrl}  className="thumbnail" layout="fill" />
+                                 <Image src={post.featuredImage.node.sourceUrl}  alt={post.title} className="thumbnail" layout="fill" />
                                </div>
                                          <div className="info">
                                              <h2>{post.title}</h2>
