@@ -6,26 +6,24 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }) {
-  const gAnalytics = `
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-44L01QM2S7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'G-44L01QM2S7');
-  </script>
-  `;
+ 
   return (
     <>
-    <Head>  
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+   <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-44L01QM2S7`}
+      />
 
-   
-
-    </Head>
+      <Script id="google-analytics-script" strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-44L01QM2S7', {
+          page_path: window.location.pathname,
+          });
+    `}
+      </Script>
       
     <Script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
